@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2>Calculadora de Média</h2>
+        <form>
+          <div class="form-group">
+            <label for="ac1">AC1:</label>
+            <input type="number" class="form-control" id="ac1" [(ngModel)]="ac1" name="ac1">
+          </div>
+          <div class="form-group">
+            <label for="ac2">AC2:</label>
+            <input type="number" class="form-control" id="ac2" [(ngModel)]="ac2" name="ac2">
+          </div>
+          <div class="form-group">
+            <label for="ag">AG:</label>
+            <input type="number" class="form-control" id="ag" [(ngModel)]="ag" name="ag">
+          </div>
+          <div class="form-group">
+            <label for="af">AF:</label>
+            <input type="number" class="form-control" id="af" [(ngModel)]="af" name="af">
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calcularMedia()">Calcular</button>
+        </form>
+        <p *ngIf="resultado">Resultado: {{ resultado }} (Média: {{ mediaFinal }})</p>
+      </div>
+    </div>
+  </div>

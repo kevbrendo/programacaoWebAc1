@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>Calculadora de IMC</h1>
+        <form>
+          <div class="form-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" class="form-control" id="peso" [(ngModel)]="peso" name="peso">
+          </div>
+          <div class="form-group">
+            <label for="altura">Altura (m):</label>
+            <input type="number" class="form-control" id="altura" [(ngModel)]="altura" name="altura">
+          </div>
+          <button type="button" class="btn btn-primary" (click)="calcularIMC()">Calcular</button>
+        </form>
+        <p *ngIf="imc > 0">Seu IMC é: {{ imc.toFixed(2) }}</p>
+        <p *ngIf="classificacao">Classificação: {{ classificacao }}</p>
+      </div>
+    </div>
+  </div>
